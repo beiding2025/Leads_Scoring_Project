@@ -21,7 +21,7 @@ Queries are sent using textQuery field, with optional field masks to limit retur
 "Full Query": Searches by business name + address to validate exact identity
 
 Data Processing Logic
-1) Google API Return Address Normalization
+1) Google API Return Address Normalization:
 Google-formatted addresses are normalized using "refine_address_with_unit()":
 Converted to lowercase
 Removes unit identifiers like "suite", "apt", "unit", "#", "floor", etc.
