@@ -32,16 +32,16 @@ Ensures consistency for comparison with lead-provided addresses
 A "full_address" field is constructed from components (address, city, state, zip) to match the formatted addresses returned by Google.
 
 Matching Logic
-1) Address Match
+1) Address Match:
 The address from the full query must match one of the addresses from the address-only query (after normalization).
 
-2) Name Match
+2) Name Match:
 The system compares the lead’s business name with the Google result using "broad_name_match()"
 Uses token-based comparison
 Filters out generic words like "restaurant", "cuisine", etc.
 Considers a match if one name is a subset of the other or if fuzzy similarity exceeds a threshold (default: 0.65)
 
-3) Cuisine Match
+3) Cuisine Match:
 The "cuisine_match()"  function checks if the Google "primaryType" includes target terms like "pizza" or "italian"
 
 Match Scoring
